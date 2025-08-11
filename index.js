@@ -1,4 +1,7 @@
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+const firebaseConfig = {}
+const app = initializeApp(firebaseConfig)
 
 let myLeads = []
 const inputEl = document.getElementById("input-el")
@@ -19,7 +22,6 @@ tabBtn.addEventListener("click", function(){
     myLeads.push(tabs[0].url)
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
     render(myLeads)
-
     })
 })
 
